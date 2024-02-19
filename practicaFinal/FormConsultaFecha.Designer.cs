@@ -40,9 +40,9 @@
             this.Column_Asunto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column_Descrip = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GroupBox_Buscar = new System.Windows.Forms.GroupBox();
+            this.Button_Buscar = new System.Windows.Forms.Button();
             this.DateTime_Seleccionar = new System.Windows.Forms.DateTimePicker();
             this.Label_Seleccionar = new System.Windows.Forms.Label();
-            this.Button_Buscar = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Data_Consulta_Fecha)).BeginInit();
@@ -95,6 +95,7 @@
             // 
             this.Data_Consulta_Fecha.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Data_Consulta_Fecha.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.Data_Consulta_Fecha.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Data_Consulta_Fecha.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenVertical;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
@@ -159,6 +160,20 @@
             this.GroupBox_Buscar.TabStop = false;
             this.GroupBox_Buscar.Text = "Buscar";
             // 
+            // Button_Buscar
+            // 
+            this.Button_Buscar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.Button_Buscar.BackColor = System.Drawing.Color.Transparent;
+            this.Button_Buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_Buscar.ForeColor = System.Drawing.Color.White;
+            this.Button_Buscar.Image = global::practicaFinal.Properties.Resources.buscar_32;
+            this.Button_Buscar.Location = new System.Drawing.Point(700, 28);
+            this.Button_Buscar.Name = "Button_Buscar";
+            this.Button_Buscar.Size = new System.Drawing.Size(39, 37);
+            this.Button_Buscar.TabIndex = 2;
+            this.Button_Buscar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.Button_Buscar.UseVisualStyleBackColor = false;
+            // 
             // DateTime_Seleccionar
             // 
             this.DateTime_Seleccionar.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -181,20 +196,6 @@
             this.Label_Seleccionar.Size = new System.Drawing.Size(141, 20);
             this.Label_Seleccionar.TabIndex = 0;
             this.Label_Seleccionar.Text = "Seleccionar Fecha";
-            // 
-            // Button_Buscar
-            // 
-            this.Button_Buscar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.Button_Buscar.BackColor = System.Drawing.Color.Transparent;
-            this.Button_Buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button_Buscar.ForeColor = System.Drawing.Color.White;
-            this.Button_Buscar.Image = global::practicaFinal.Properties.Resources.buscar_32;
-            this.Button_Buscar.Location = new System.Drawing.Point(700, 28);
-            this.Button_Buscar.Name = "Button_Buscar";
-            this.Button_Buscar.Size = new System.Drawing.Size(39, 37);
-            this.Button_Buscar.TabIndex = 2;
-            this.Button_Buscar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.Button_Buscar.UseVisualStyleBackColor = false;
             // 
             // FormConsultaFecha
             // 
