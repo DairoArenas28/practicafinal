@@ -32,6 +32,7 @@
             this.Label_Agendar_Cita = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.Button_Guardar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.RichTextBox_Descrip = new System.Windows.Forms.RichTextBox();
             this.Label_Descrip = new System.Windows.Forms.Label();
@@ -45,7 +46,6 @@
             this.Label_Fecha = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.Label_Nombre_Estudiante = new System.Windows.Forms.Label();
-            this.Button_Guardar = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -94,6 +94,19 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(800, 60);
             this.panel3.TabIndex = 4;
+            // 
+            // Button_Guardar
+            // 
+            this.Button_Guardar.Dock = System.Windows.Forms.DockStyle.Right;
+            this.Button_Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Button_Guardar.ForeColor = System.Drawing.Color.Transparent;
+            this.Button_Guardar.Image = global::practicaFinal.Properties.Resources.guardar;
+            this.Button_Guardar.Location = new System.Drawing.Point(725, 0);
+            this.Button_Guardar.Name = "Button_Guardar";
+            this.Button_Guardar.Size = new System.Drawing.Size(75, 60);
+            this.Button_Guardar.TabIndex = 0;
+            this.Button_Guardar.UseVisualStyleBackColor = true;
+            this.Button_Guardar.Click += new System.EventHandler(this.Button_Guardar_Click);
             // 
             // groupBox1
             // 
@@ -168,6 +181,8 @@
             this.ComboBox_Profesor.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ComboBox_Profesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ComboBox_Profesor.FormattingEnabled = true;
+            this.ComboBox_Profesor.Items.AddRange(new object[] {
+            "Yaned Larrea Cardona"});
             this.ComboBox_Profesor.Location = new System.Drawing.Point(240, 165);
             this.ComboBox_Profesor.Name = "ComboBox_Profesor";
             this.ComboBox_Profesor.Size = new System.Drawing.Size(346, 28);
@@ -245,18 +260,6 @@
             this.Label_Nombre_Estudiante.Size = new System.Drawing.Size(122, 16);
             this.Label_Nombre_Estudiante.TabIndex = 2;
             this.Label_Nombre_Estudiante.Text = "Nombre Estudiante";
-            // 
-            // Button_Guardar
-            // 
-            this.Button_Guardar.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Button_Guardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Button_Guardar.ForeColor = System.Drawing.Color.Transparent;
-            this.Button_Guardar.Image = global::practicaFinal.Properties.Resources.guardar;
-            this.Button_Guardar.Location = new System.Drawing.Point(725, 0);
-            this.Button_Guardar.Name = "Button_Guardar";
-            this.Button_Guardar.Size = new System.Drawing.Size(75, 60);
-            this.Button_Guardar.TabIndex = 0;
-            this.Button_Guardar.UseVisualStyleBackColor = true;
             // 
             // FormAgendamiento
             // 
