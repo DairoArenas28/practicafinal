@@ -72,6 +72,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XDocumento.cs" />
     <EmbeddedResource Include="FormAgendamiento.resx">
       <DependentUpon>FormAgendamiento.cs</DependentUpon>
     </EmbeddedResource>

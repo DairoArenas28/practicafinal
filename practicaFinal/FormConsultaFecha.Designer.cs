@@ -34,15 +34,16 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Data_Consulta_Fecha = new System.Windows.Forms.DataGridView();
-            this.Column_NombreEstudiante = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_Docente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_Asunto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column_Descrip = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GroupBox_Buscar = new System.Windows.Forms.GroupBox();
             this.Button_Buscar = new System.Windows.Forms.Button();
-            this.DateTime_Seleccionar = new System.Windows.Forms.DateTimePicker();
+            this.DateTime_Seleccionar_Fecha = new System.Windows.Forms.DateTimePicker();
             this.Label_Seleccionar = new System.Windows.Forms.Label();
+            this.Estudiante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Docente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Asunto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Data_Consulta_Fecha)).BeginInit();
@@ -107,11 +108,12 @@
             this.Data_Consulta_Fecha.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Data_Consulta_Fecha.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Data_Consulta_Fecha.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column_NombreEstudiante,
-            this.Column_Fecha,
-            this.Column_Docente,
-            this.Column_Asunto,
-            this.Column_Descrip});
+            this.Estudiante,
+            this.Fecha,
+            this.Hora,
+            this.Docente,
+            this.Asunto,
+            this.Descripcion});
             this.Data_Consulta_Fecha.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Data_Consulta_Fecha.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.Data_Consulta_Fecha.Location = new System.Drawing.Point(0, 80);
@@ -120,35 +122,10 @@
             this.Data_Consulta_Fecha.Size = new System.Drawing.Size(800, 295);
             this.Data_Consulta_Fecha.TabIndex = 2;
             // 
-            // Column_NombreEstudiante
-            // 
-            this.Column_NombreEstudiante.HeaderText = "Nombre Estudiante";
-            this.Column_NombreEstudiante.Name = "Column_NombreEstudiante";
-            // 
-            // Column_Fecha
-            // 
-            this.Column_Fecha.HeaderText = "Fecha";
-            this.Column_Fecha.Name = "Column_Fecha";
-            // 
-            // Column_Docente
-            // 
-            this.Column_Docente.HeaderText = "Docente";
-            this.Column_Docente.Name = "Column_Docente";
-            // 
-            // Column_Asunto
-            // 
-            this.Column_Asunto.HeaderText = "Asunto";
-            this.Column_Asunto.Name = "Column_Asunto";
-            // 
-            // Column_Descrip
-            // 
-            this.Column_Descrip.HeaderText = "Descripción";
-            this.Column_Descrip.Name = "Column_Descrip";
-            // 
             // GroupBox_Buscar
             // 
             this.GroupBox_Buscar.Controls.Add(this.Button_Buscar);
-            this.GroupBox_Buscar.Controls.Add(this.DateTime_Seleccionar);
+            this.GroupBox_Buscar.Controls.Add(this.DateTime_Seleccionar_Fecha);
             this.GroupBox_Buscar.Controls.Add(this.Label_Seleccionar);
             this.GroupBox_Buscar.Dock = System.Windows.Forms.DockStyle.Top;
             this.GroupBox_Buscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -173,17 +150,18 @@
             this.Button_Buscar.TabIndex = 2;
             this.Button_Buscar.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.Button_Buscar.UseVisualStyleBackColor = false;
+            this.Button_Buscar.Click += new System.EventHandler(this.Button_Buscar_Click);
             // 
-            // DateTime_Seleccionar
+            // DateTime_Seleccionar_Fecha
             // 
-            this.DateTime_Seleccionar.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.DateTime_Seleccionar.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
-            this.DateTime_Seleccionar.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(167)))));
-            this.DateTime_Seleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateTime_Seleccionar.Location = new System.Drawing.Point(233, 34);
-            this.DateTime_Seleccionar.Name = "DateTime_Seleccionar";
-            this.DateTime_Seleccionar.Size = new System.Drawing.Size(429, 26);
-            this.DateTime_Seleccionar.TabIndex = 1;
+            this.DateTime_Seleccionar_Fecha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.DateTime_Seleccionar_Fecha.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
+            this.DateTime_Seleccionar_Fecha.CalendarTitleForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(167)))));
+            this.DateTime_Seleccionar_Fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateTime_Seleccionar_Fecha.Location = new System.Drawing.Point(233, 34);
+            this.DateTime_Seleccionar_Fecha.Name = "DateTime_Seleccionar_Fecha";
+            this.DateTime_Seleccionar_Fecha.Size = new System.Drawing.Size(429, 26);
+            this.DateTime_Seleccionar_Fecha.TabIndex = 1;
             // 
             // Label_Seleccionar
             // 
@@ -191,11 +169,41 @@
             this.Label_Seleccionar.AutoSize = true;
             this.Label_Seleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label_Seleccionar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(167)))));
-            this.Label_Seleccionar.Location = new System.Drawing.Point(79, 36);
+            this.Label_Seleccionar.Location = new System.Drawing.Point(89, 36);
             this.Label_Seleccionar.Name = "Label_Seleccionar";
             this.Label_Seleccionar.Size = new System.Drawing.Size(141, 20);
             this.Label_Seleccionar.TabIndex = 0;
             this.Label_Seleccionar.Text = "Seleccionar Fecha";
+            // 
+            // Estudiante
+            // 
+            this.Estudiante.HeaderText = "Estudiante";
+            this.Estudiante.Name = "Estudiante";
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            // 
+            // Hora
+            // 
+            this.Hora.HeaderText = "Hora";
+            this.Hora.Name = "Hora";
+            // 
+            // Docente
+            // 
+            this.Docente.HeaderText = "Docente";
+            this.Docente.Name = "Docente";
+            // 
+            // Asunto
+            // 
+            this.Asunto.HeaderText = "Asunto";
+            this.Asunto.Name = "Asunto";
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.HeaderText = "Descripción";
+            this.Descripcion.Name = "Descripcion";
             // 
             // FormConsultaFecha
             // 
@@ -227,13 +235,14 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.GroupBox GroupBox_Buscar;
         private System.Windows.Forms.Button Button_Buscar;
-        private System.Windows.Forms.DateTimePicker DateTime_Seleccionar;
+        private System.Windows.Forms.DateTimePicker DateTime_Seleccionar_Fecha;
         private System.Windows.Forms.Label Label_Seleccionar;
         private System.Windows.Forms.DataGridView Data_Consulta_Fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_NombreEstudiante;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Docente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Asunto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column_Descrip;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Estudiante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Hora;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Docente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Asunto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
     }
 }

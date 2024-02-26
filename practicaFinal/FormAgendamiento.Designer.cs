@@ -38,13 +38,13 @@
             this.Label_Descrip = new System.Windows.Forms.Label();
             this.TextBox_Asunto = new System.Windows.Forms.TextBox();
             this.Label_Asunto = new System.Windows.Forms.Label();
-            this.ComboBox_Profesor = new System.Windows.Forms.ComboBox();
+            this.ComboBox_Docente = new System.Windows.Forms.ComboBox();
             this.Label_Docente = new System.Windows.Forms.Label();
             this.ComboBox_Hora = new System.Windows.Forms.ComboBox();
             this.Label_Hora = new System.Windows.Forms.Label();
             this.DateTime_Fecha = new System.Windows.Forms.DateTimePicker();
             this.Label_Fecha = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TextBox_Estudiante = new System.Windows.Forms.TextBox();
             this.Label_Nombre_Estudiante = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -115,13 +115,13 @@
             this.groupBox1.Controls.Add(this.Label_Descrip);
             this.groupBox1.Controls.Add(this.TextBox_Asunto);
             this.groupBox1.Controls.Add(this.Label_Asunto);
-            this.groupBox1.Controls.Add(this.ComboBox_Profesor);
+            this.groupBox1.Controls.Add(this.ComboBox_Docente);
             this.groupBox1.Controls.Add(this.Label_Docente);
             this.groupBox1.Controls.Add(this.ComboBox_Hora);
             this.groupBox1.Controls.Add(this.Label_Hora);
             this.groupBox1.Controls.Add(this.DateTime_Fecha);
             this.groupBox1.Controls.Add(this.Label_Fecha);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.TextBox_Estudiante);
             this.groupBox1.Controls.Add(this.Label_Nombre_Estudiante);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -176,17 +176,17 @@
             this.Label_Asunto.TabIndex = 9;
             this.Label_Asunto.Text = "Asunto";
             // 
-            // ComboBox_Profesor
+            // ComboBox_Docente
             // 
-            this.ComboBox_Profesor.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.ComboBox_Profesor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ComboBox_Profesor.FormattingEnabled = true;
-            this.ComboBox_Profesor.Items.AddRange(new object[] {
+            this.ComboBox_Docente.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.ComboBox_Docente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ComboBox_Docente.FormattingEnabled = true;
+            this.ComboBox_Docente.Items.AddRange(new object[] {
             "Yaned Larrea Cardona"});
-            this.ComboBox_Profesor.Location = new System.Drawing.Point(240, 165);
-            this.ComboBox_Profesor.Name = "ComboBox_Profesor";
-            this.ComboBox_Profesor.Size = new System.Drawing.Size(346, 28);
-            this.ComboBox_Profesor.TabIndex = 8;
+            this.ComboBox_Docente.Location = new System.Drawing.Point(240, 165);
+            this.ComboBox_Docente.Name = "ComboBox_Docente";
+            this.ComboBox_Docente.Size = new System.Drawing.Size(346, 28);
+            this.ComboBox_Docente.TabIndex = 8;
             // 
             // Label_Docente
             // 
@@ -204,6 +204,30 @@
             this.ComboBox_Hora.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.ComboBox_Hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ComboBox_Hora.FormattingEnabled = true;
+            this.ComboBox_Hora.Items.AddRange(new object[] {
+            "0",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23"});
             this.ComboBox_Hora.Location = new System.Drawing.Point(440, 107);
             this.ComboBox_Hora.Name = "ComboBox_Hora";
             this.ComboBox_Hora.Size = new System.Drawing.Size(146, 28);
@@ -240,15 +264,15 @@
             this.Label_Fecha.TabIndex = 3;
             this.Label_Fecha.Text = "Fecha";
             // 
-            // textBox1
+            // TextBox_Estudiante
             // 
-            this.textBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(240, 50);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(346, 26);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Tag = "";
+            this.TextBox_Estudiante.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TextBox_Estudiante.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBox_Estudiante.Location = new System.Drawing.Point(240, 50);
+            this.TextBox_Estudiante.Name = "TextBox_Estudiante";
+            this.TextBox_Estudiante.Size = new System.Drawing.Size(346, 26);
+            this.TextBox_Estudiante.TabIndex = 1;
+            this.TextBox_Estudiante.Tag = "";
             // 
             // Label_Nombre_Estudiante
             // 
@@ -285,13 +309,13 @@
 
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TextBox_Estudiante;
         private System.Windows.Forms.Label Label_Nombre_Estudiante;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label Label_Fecha;
         private System.Windows.Forms.Label Label_Hora;
         private System.Windows.Forms.DateTimePicker DateTime_Fecha;
-        private System.Windows.Forms.ComboBox ComboBox_Profesor;
+        private System.Windows.Forms.ComboBox ComboBox_Docente;
         private System.Windows.Forms.Label Label_Docente;
         private System.Windows.Forms.ComboBox ComboBox_Hora;
         private System.Windows.Forms.Label Label_Asunto;
