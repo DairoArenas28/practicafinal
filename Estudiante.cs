@@ -2,8 +2,7 @@
 using System.Windows.Forms;
 using System.IO;
 using System.Linq;
-
-using Docente;
+namespace practicaFinal
 public class Estudiante : Docente
 {
 	public string Grado { get; set; }

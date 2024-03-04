@@ -60,6 +60,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(800, 88);
             this.panel2.TabIndex = 0;
+            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // Label_Agendar_Cita
             // 
@@ -74,6 +75,7 @@
             this.Label_Agendar_Cita.TabIndex = 2;
             this.Label_Agendar_Cita.Text = "Agendar Cita";
             this.Label_Agendar_Cita.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Label_Agendar_Cita.Click += new System.EventHandler(this.Label_Agendar_Cita_Click);
             // 
             // panel1
             // 
@@ -85,6 +87,7 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 523);
             this.panel1.TabIndex = 0;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel3
             // 
@@ -94,6 +97,7 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(800, 60);
             this.panel3.TabIndex = 4;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // Button_Guardar
             // 
@@ -143,6 +147,7 @@
             this.RichTextBox_Descrip.Size = new System.Drawing.Size(346, 80);
             this.RichTextBox_Descrip.TabIndex = 12;
             this.RichTextBox_Descrip.Text = "";
+            this.RichTextBox_Descrip.TextChanged += new System.EventHandler(this.RichTextBox_Descrip_TextChanged);
             // 
             // Label_Descrip
             // 
@@ -154,6 +159,7 @@
             this.Label_Descrip.Size = new System.Drawing.Size(75, 16);
             this.Label_Descrip.TabIndex = 11;
             this.Label_Descrip.Text = "Descipción";
+            this.Label_Descrip.Click += new System.EventHandler(this.Label_Descrip_Click);
             // 
             // TextBox_Asunto
             // 
@@ -164,6 +170,7 @@
             this.TextBox_Asunto.Size = new System.Drawing.Size(346, 26);
             this.TextBox_Asunto.TabIndex = 10;
             this.TextBox_Asunto.Tag = "";
+            this.TextBox_Asunto.TextChanged += new System.EventHandler(this.TextBox_Asunto_TextChanged);
             // 
             // Label_Asunto
             // 
@@ -175,6 +182,7 @@
             this.Label_Asunto.Size = new System.Drawing.Size(48, 16);
             this.Label_Asunto.TabIndex = 9;
             this.Label_Asunto.Text = "Asunto";
+            this.Label_Asunto.Click += new System.EventHandler(this.Label_Asunto_Click);
             // 
             // ComboBox_Docente
             // 
@@ -187,6 +195,7 @@
             this.ComboBox_Docente.Name = "ComboBox_Docente";
             this.ComboBox_Docente.Size = new System.Drawing.Size(346, 28);
             this.ComboBox_Docente.TabIndex = 8;
+            this.ComboBox_Docente.SelectedIndexChanged += new System.EventHandler(this.ComboBox_Docente_SelectedIndexChanged);
             // 
             // Label_Docente
             // 
@@ -198,6 +207,7 @@
             this.Label_Docente.Size = new System.Drawing.Size(58, 16);
             this.Label_Docente.TabIndex = 7;
             this.Label_Docente.Text = "Docente";
+            this.Label_Docente.Click += new System.EventHandler(this.Label_Docente_Click);
             // 
             // ComboBox_Hora
             // 
@@ -232,6 +242,7 @@
             this.ComboBox_Hora.Name = "ComboBox_Hora";
             this.ComboBox_Hora.Size = new System.Drawing.Size(146, 28);
             this.ComboBox_Hora.TabIndex = 6;
+            this.ComboBox_Hora.SelectedIndexChanged += new System.EventHandler(this.ComboBox_Hora_SelectedIndexChanged);
             // 
             // Label_Hora
             // 
@@ -243,6 +254,7 @@
             this.Label_Hora.Size = new System.Drawing.Size(37, 16);
             this.Label_Hora.TabIndex = 5;
             this.Label_Hora.Text = "Hora";
+            this.Label_Hora.Click += new System.EventHandler(this.Label_Hora_Click);
             // 
             // DateTime_Fecha
             // 
@@ -252,6 +264,7 @@
             this.DateTime_Fecha.Name = "DateTime_Fecha";
             this.DateTime_Fecha.Size = new System.Drawing.Size(187, 22);
             this.DateTime_Fecha.TabIndex = 4;
+            this.DateTime_Fecha.ValueChanged += new System.EventHandler(this.DateTime_Fecha_ValueChanged);
             // 
             // Label_Fecha
             // 
@@ -263,6 +276,7 @@
             this.Label_Fecha.Size = new System.Drawing.Size(45, 16);
             this.Label_Fecha.TabIndex = 3;
             this.Label_Fecha.Text = "Fecha";
+            this.Label_Fecha.Click += new System.EventHandler(this.Label_Fecha_Click);
             // 
             // TextBox_Estudiante
             // 
@@ -273,6 +287,7 @@
             this.TextBox_Estudiante.Size = new System.Drawing.Size(346, 26);
             this.TextBox_Estudiante.TabIndex = 1;
             this.TextBox_Estudiante.Tag = "";
+            this.TextBox_Estudiante.TextChanged += new System.EventHandler(this.TextBox_Estudiante_TextChanged);
             // 
             // Label_Nombre_Estudiante
             // 
@@ -284,6 +299,7 @@
             this.Label_Nombre_Estudiante.Size = new System.Drawing.Size(122, 16);
             this.Label_Nombre_Estudiante.TabIndex = 2;
             this.Label_Nombre_Estudiante.Text = "Nombre Estudiante";
+            this.Label_Nombre_Estudiante.Click += new System.EventHandler(this.Label_Nombre_Estudiante_Click);
             // 
             // FormAgendamiento
             // 

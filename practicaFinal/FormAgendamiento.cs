@@ -44,6 +44,7 @@ namespace practicaFinal
             try
             {
                 string estudiante = (TextBox_Estudiante.Text).Trim();
+                Estudiante estudobj = new Estudiante(estudiante, estudiante);
                 DateTime fecha = DateTime_Fecha.Value;
                 string fechaFormateada = fecha.ToString("dd/MM/yyyy"); // Formato día/mes/año
                 string hora = ComboBox_Hora.SelectedItem.ToString();
@@ -62,7 +63,7 @@ namespace practicaFinal
                         new XElement("Agendas",
                             new XElement("Agenda",
                             new XAttribute("id", 1), //Se iniciado con un 1
-                                new XElement("Estudiante", estudiante),
+                                new XElement("Estudiante", estudobj.Nombre),
                                 new XElement("Fecha", fechaFormateada),
                                 new XElement("Hora", hora),
                                 new XElement("Docente", docente),
@@ -92,7 +93,7 @@ namespace practicaFinal
                     XElement newAgenda =
                         new XElement("Agenda",
                         new XAttribute("id", newId),
-                            new XElement("Estudiante", estudiante),
+                            new XElement("Estudiante", estudobj.Nombre),
                             new XElement("Fecha", fechaFormateada),
                             new XElement("Hora", hora),
                             new XElement("Docente", docente),
@@ -108,7 +109,8 @@ namespace practicaFinal
                     MessageBox.Show("Contenido agregado a la etiqueta Agendas", "Contenido del elemento Customer", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
-            } catch (Exception ex)
+            }
+            catch (Exception ex)
             {
                 MessageBox.Show($"Se produjo un error en el archivo XML:\n{ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -121,6 +123,86 @@ namespace practicaFinal
             ComboBox_Docente.SelectedItem = null;
             TextBox_Asunto.Text = "";
             RichTextBox_Descrip.Text = "";
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Label_Agendar_Cita_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void RichTextBox_Descrip_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label_Descrip_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextBox_Asunto_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label_Asunto_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ComboBox_Docente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label_Docente_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ComboBox_Hora_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label_Hora_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DateTime_Fecha_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label_Fecha_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TextBox_Estudiante_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label_Nombre_Estudiante_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
