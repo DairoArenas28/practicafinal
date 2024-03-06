@@ -34,6 +34,8 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.Button_Guardar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.TextBox_Apellido_Estudiante = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.RichTextBox_Descrip = new System.Windows.Forms.RichTextBox();
             this.Label_Descrip = new System.Windows.Forms.Label();
             this.TextBox_Asunto = new System.Windows.Forms.TextBox();
@@ -44,7 +46,7 @@
             this.Label_Hora = new System.Windows.Forms.Label();
             this.DateTime_Fecha = new System.Windows.Forms.DateTimePicker();
             this.Label_Fecha = new System.Windows.Forms.Label();
-            this.TextBox_Estudiante = new System.Windows.Forms.TextBox();
+            this.TextBox_Nombre_Estudiante = new System.Windows.Forms.TextBox();
             this.Label_Nombre_Estudiante = new System.Windows.Forms.Label();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -60,7 +62,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(800, 88);
             this.panel2.TabIndex = 0;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // Label_Agendar_Cita
             // 
@@ -75,7 +76,6 @@
             this.Label_Agendar_Cita.TabIndex = 2;
             this.Label_Agendar_Cita.Text = "Agendar Cita";
             this.Label_Agendar_Cita.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Label_Agendar_Cita.Click += new System.EventHandler(this.Label_Agendar_Cita_Click);
             // 
             // panel1
             // 
@@ -87,7 +87,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 523);
             this.panel1.TabIndex = 0;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel3
             // 
@@ -97,7 +96,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(800, 60);
             this.panel3.TabIndex = 4;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // Button_Guardar
             // 
@@ -115,6 +113,8 @@
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.groupBox1.Controls.Add(this.TextBox_Apellido_Estudiante);
+            this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.RichTextBox_Descrip);
             this.groupBox1.Controls.Add(this.Label_Descrip);
             this.groupBox1.Controls.Add(this.TextBox_Asunto);
@@ -125,7 +125,7 @@
             this.groupBox1.Controls.Add(this.Label_Hora);
             this.groupBox1.Controls.Add(this.DateTime_Fecha);
             this.groupBox1.Controls.Add(this.Label_Fecha);
-            this.groupBox1.Controls.Add(this.TextBox_Estudiante);
+            this.groupBox1.Controls.Add(this.TextBox_Nombre_Estudiante);
             this.groupBox1.Controls.Add(this.Label_Nombre_Estudiante);
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -138,51 +138,68 @@
             this.groupBox1.Text = "Información";
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
+            // TextBox_Apellido_Estudiante
+            // 
+            this.TextBox_Apellido_Estudiante.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TextBox_Apellido_Estudiante.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBox_Apellido_Estudiante.Location = new System.Drawing.Point(420, 50);
+            this.TextBox_Apellido_Estudiante.Name = "TextBox_Apellido_Estudiante";
+            this.TextBox_Apellido_Estudiante.Size = new System.Drawing.Size(185, 26);
+            this.TextBox_Apellido_Estudiante.TabIndex = 13;
+            this.TextBox_Apellido_Estudiante.Tag = "";
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(424, 31);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(123, 16);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Apellido Estudiante";
+            // 
             // RichTextBox_Descrip
             // 
             this.RichTextBox_Descrip.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.RichTextBox_Descrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RichTextBox_Descrip.Location = new System.Drawing.Point(240, 278);
+            this.RichTextBox_Descrip.Location = new System.Drawing.Point(220, 278);
             this.RichTextBox_Descrip.Name = "RichTextBox_Descrip";
-            this.RichTextBox_Descrip.Size = new System.Drawing.Size(346, 80);
+            this.RichTextBox_Descrip.Size = new System.Drawing.Size(385, 84);
             this.RichTextBox_Descrip.TabIndex = 12;
             this.RichTextBox_Descrip.Text = "";
-            this.RichTextBox_Descrip.TextChanged += new System.EventHandler(this.RichTextBox_Descrip_TextChanged);
             // 
             // Label_Descrip
             // 
             this.Label_Descrip.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Label_Descrip.AutoSize = true;
             this.Label_Descrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_Descrip.Location = new System.Drawing.Point(237, 258);
+            this.Label_Descrip.Location = new System.Drawing.Point(223, 258);
             this.Label_Descrip.Name = "Label_Descrip";
             this.Label_Descrip.Size = new System.Drawing.Size(75, 16);
             this.Label_Descrip.TabIndex = 11;
             this.Label_Descrip.Text = "Descipción";
-            this.Label_Descrip.Click += new System.EventHandler(this.Label_Descrip_Click);
             // 
             // TextBox_Asunto
             // 
             this.TextBox_Asunto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.TextBox_Asunto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBox_Asunto.Location = new System.Drawing.Point(240, 222);
+            this.TextBox_Asunto.Location = new System.Drawing.Point(220, 222);
             this.TextBox_Asunto.Name = "TextBox_Asunto";
-            this.TextBox_Asunto.Size = new System.Drawing.Size(346, 26);
+            this.TextBox_Asunto.Size = new System.Drawing.Size(385, 26);
             this.TextBox_Asunto.TabIndex = 10;
             this.TextBox_Asunto.Tag = "";
-            this.TextBox_Asunto.TextChanged += new System.EventHandler(this.TextBox_Asunto_TextChanged);
             // 
             // Label_Asunto
             // 
             this.Label_Asunto.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Label_Asunto.AutoSize = true;
             this.Label_Asunto.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_Asunto.Location = new System.Drawing.Point(237, 203);
+            this.Label_Asunto.Location = new System.Drawing.Point(223, 203);
             this.Label_Asunto.Name = "Label_Asunto";
             this.Label_Asunto.Size = new System.Drawing.Size(48, 16);
             this.Label_Asunto.TabIndex = 9;
             this.Label_Asunto.Text = "Asunto";
-            this.Label_Asunto.Click += new System.EventHandler(this.Label_Asunto_Click);
             // 
             // ComboBox_Docente
             // 
@@ -191,23 +208,21 @@
             this.ComboBox_Docente.FormattingEnabled = true;
             this.ComboBox_Docente.Items.AddRange(new object[] {
             "Yaned Larrea Cardona"});
-            this.ComboBox_Docente.Location = new System.Drawing.Point(240, 165);
+            this.ComboBox_Docente.Location = new System.Drawing.Point(220, 165);
             this.ComboBox_Docente.Name = "ComboBox_Docente";
-            this.ComboBox_Docente.Size = new System.Drawing.Size(346, 28);
+            this.ComboBox_Docente.Size = new System.Drawing.Size(385, 28);
             this.ComboBox_Docente.TabIndex = 8;
-            this.ComboBox_Docente.SelectedIndexChanged += new System.EventHandler(this.ComboBox_Docente_SelectedIndexChanged);
             // 
             // Label_Docente
             // 
             this.Label_Docente.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Label_Docente.AutoSize = true;
             this.Label_Docente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_Docente.Location = new System.Drawing.Point(237, 145);
+            this.Label_Docente.Location = new System.Drawing.Point(223, 146);
             this.Label_Docente.Name = "Label_Docente";
             this.Label_Docente.Size = new System.Drawing.Size(58, 16);
             this.Label_Docente.TabIndex = 7;
             this.Label_Docente.Text = "Docente";
-            this.Label_Docente.Click += new System.EventHandler(this.Label_Docente_Click);
             // 
             // ComboBox_Hora
             // 
@@ -215,91 +230,74 @@
             this.ComboBox_Hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ComboBox_Hora.FormattingEnabled = true;
             this.ComboBox_Hora.Items.AddRange(new object[] {
-            "0",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23"});
-            this.ComboBox_Hora.Location = new System.Drawing.Point(440, 107);
+            "8:00 AM",
+            "9:00 AM",
+            "10:00 AM",
+            "11:00 AM",
+            "13:00 PM",
+            "14:00 PM",
+            "15:00 PM",
+            "16:00 PM",
+            "17:00 PM",
+            "18:00 PM",
+            "19:00 PM",
+            "20:00 PM"});
+            this.ComboBox_Hora.Location = new System.Drawing.Point(420, 107);
             this.ComboBox_Hora.Name = "ComboBox_Hora";
-            this.ComboBox_Hora.Size = new System.Drawing.Size(146, 28);
+            this.ComboBox_Hora.Size = new System.Drawing.Size(185, 28);
             this.ComboBox_Hora.TabIndex = 6;
-            this.ComboBox_Hora.SelectedIndexChanged += new System.EventHandler(this.ComboBox_Hora_SelectedIndexChanged);
             // 
             // Label_Hora
             // 
             this.Label_Hora.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Label_Hora.AutoSize = true;
             this.Label_Hora.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_Hora.Location = new System.Drawing.Point(437, 87);
+            this.Label_Hora.Location = new System.Drawing.Point(423, 87);
             this.Label_Hora.Name = "Label_Hora";
             this.Label_Hora.Size = new System.Drawing.Size(37, 16);
             this.Label_Hora.TabIndex = 5;
             this.Label_Hora.Text = "Hora";
-            this.Label_Hora.Click += new System.EventHandler(this.Label_Hora_Click);
             // 
             // DateTime_Fecha
             // 
             this.DateTime_Fecha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.DateTime_Fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateTime_Fecha.Location = new System.Drawing.Point(240, 107);
+            this.DateTime_Fecha.Location = new System.Drawing.Point(220, 107);
             this.DateTime_Fecha.Name = "DateTime_Fecha";
-            this.DateTime_Fecha.Size = new System.Drawing.Size(187, 22);
+            this.DateTime_Fecha.Size = new System.Drawing.Size(185, 22);
             this.DateTime_Fecha.TabIndex = 4;
-            this.DateTime_Fecha.ValueChanged += new System.EventHandler(this.DateTime_Fecha_ValueChanged);
             // 
             // Label_Fecha
             // 
             this.Label_Fecha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Label_Fecha.AutoSize = true;
             this.Label_Fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_Fecha.Location = new System.Drawing.Point(237, 87);
+            this.Label_Fecha.Location = new System.Drawing.Point(223, 87);
             this.Label_Fecha.Name = "Label_Fecha";
             this.Label_Fecha.Size = new System.Drawing.Size(45, 16);
             this.Label_Fecha.TabIndex = 3;
             this.Label_Fecha.Text = "Fecha";
-            this.Label_Fecha.Click += new System.EventHandler(this.Label_Fecha_Click);
             // 
-            // TextBox_Estudiante
+            // TextBox_Nombre_Estudiante
             // 
-            this.TextBox_Estudiante.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.TextBox_Estudiante.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextBox_Estudiante.Location = new System.Drawing.Point(240, 50);
-            this.TextBox_Estudiante.Name = "TextBox_Estudiante";
-            this.TextBox_Estudiante.Size = new System.Drawing.Size(346, 26);
-            this.TextBox_Estudiante.TabIndex = 1;
-            this.TextBox_Estudiante.Tag = "";
-            this.TextBox_Estudiante.TextChanged += new System.EventHandler(this.TextBox_Estudiante_TextChanged);
+            this.TextBox_Nombre_Estudiante.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.TextBox_Nombre_Estudiante.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextBox_Nombre_Estudiante.Location = new System.Drawing.Point(220, 50);
+            this.TextBox_Nombre_Estudiante.Name = "TextBox_Nombre_Estudiante";
+            this.TextBox_Nombre_Estudiante.Size = new System.Drawing.Size(185, 26);
+            this.TextBox_Nombre_Estudiante.TabIndex = 1;
+            this.TextBox_Nombre_Estudiante.Tag = "";
             // 
             // Label_Nombre_Estudiante
             // 
             this.Label_Nombre_Estudiante.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Label_Nombre_Estudiante.AutoSize = true;
             this.Label_Nombre_Estudiante.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Label_Nombre_Estudiante.Location = new System.Drawing.Point(237, 31);
+            this.Label_Nombre_Estudiante.Location = new System.Drawing.Point(223, 31);
             this.Label_Nombre_Estudiante.Name = "Label_Nombre_Estudiante";
             this.Label_Nombre_Estudiante.Size = new System.Drawing.Size(122, 16);
             this.Label_Nombre_Estudiante.TabIndex = 2;
             this.Label_Nombre_Estudiante.Text = "Nombre Estudiante";
-            this.Label_Nombre_Estudiante.Click += new System.EventHandler(this.Label_Nombre_Estudiante_Click);
             // 
             // FormAgendamiento
             // 
@@ -325,7 +323,7 @@
 
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox TextBox_Estudiante;
+        private System.Windows.Forms.TextBox TextBox_Nombre_Estudiante;
         private System.Windows.Forms.Label Label_Nombre_Estudiante;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label Label_Fecha;
@@ -341,5 +339,7 @@
         private System.Windows.Forms.Label Label_Agendar_Cita;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button Button_Guardar;
+        private System.Windows.Forms.TextBox TextBox_Apellido_Estudiante;
+        private System.Windows.Forms.Label label1;
     }
 }

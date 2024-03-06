@@ -16,5 +16,10 @@ namespace practicaFinal
             this.Nombre = nombre;
             this.Apellido = apellido;
         }
+
+        public void AgregarAgenda()
+        {
+            MessageBox.Show("Datos guardado", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
 }
