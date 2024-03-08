@@ -65,16 +65,15 @@
             // 
             // Label_Agendar_Cita
             // 
-            this.Label_Agendar_Cita.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.Label_Agendar_Cita.AutoSize = true;
             this.Label_Agendar_Cita.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.Label_Agendar_Cita.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Label_Agendar_Cita.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(126)))), ((int)(((byte)(167)))));
-            this.Label_Agendar_Cita.Location = new System.Drawing.Point(260, 19);
+            this.Label_Agendar_Cita.Location = new System.Drawing.Point(210, 16);
             this.Label_Agendar_Cita.Name = "Label_Agendar_Cita";
-            this.Label_Agendar_Cita.Size = new System.Drawing.Size(305, 55);
+            this.Label_Agendar_Cita.Size = new System.Drawing.Size(407, 55);
             this.Label_Agendar_Cita.TabIndex = 2;
-            this.Label_Agendar_Cita.Text = "Agendar Cita";
+            this.Label_Agendar_Cita.Text = "Agendar Asesoría";
             this.Label_Agendar_Cita.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1
