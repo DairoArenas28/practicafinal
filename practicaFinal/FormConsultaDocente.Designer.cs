@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Label_Consultar_Fecha = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.Data_Consulta_Docente = new System.Windows.Forms.DataGridView();
-            this.Docente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Estudiante = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Asunto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.GroupBox_Buscar = new System.Windows.Forms.GroupBox();
             this.ComboBox_Docente = new System.Windows.Forms.ComboBox();
             this.Button_Buscar = new System.Windows.Forms.Button();
             this.Label_Seleccionar_Docente = new System.Windows.Forms.Label();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Asunto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Data_Consulta_Docente)).BeginInit();
@@ -94,23 +94,26 @@
             // 
             // Data_Consulta_Docente
             // 
+            this.Data_Consulta_Docente.AllowUserToAddRows = false;
+            this.Data_Consulta_Docente.AllowUserToDeleteRows = false;
+            this.Data_Consulta_Docente.AllowUserToOrderColumns = true;
             this.Data_Consulta_Docente.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Data_Consulta_Docente.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.Data_Consulta_Docente.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.Data_Consulta_Docente.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Data_Consulta_Docente.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Data_Consulta_Docente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.Data_Consulta_Docente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Data_Consulta_Docente.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.Data_Consulta_Docente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Data_Consulta_Docente.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Docente,
-            this.Estudiante,
+            this.Nombre,
+            this.Apellido,
             this.Fecha,
             this.Hora,
             this.Asunto,
@@ -118,40 +121,11 @@
             this.Data_Consulta_Docente.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Data_Consulta_Docente.Location = new System.Drawing.Point(0, 80);
             this.Data_Consulta_Docente.Name = "Data_Consulta_Docente";
+            this.Data_Consulta_Docente.ReadOnly = true;
             this.Data_Consulta_Docente.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            this.Data_Consulta_Docente.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.Data_Consulta_Docente.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.Data_Consulta_Docente.Size = new System.Drawing.Size(800, 222);
             this.Data_Consulta_Docente.TabIndex = 3;
-            // 
-            // Docente
-            // 
-            this.Docente.HeaderText = "Docente";
-            this.Docente.Name = "Docente";
-            // 
-            // Estudiante
-            // 
-            this.Estudiante.HeaderText = "Estudiante";
-            this.Estudiante.Name = "Estudiante";
-            // 
-            // Fecha
-            // 
-            this.Fecha.HeaderText = "Fecha";
-            this.Fecha.Name = "Fecha";
-            // 
-            // Hora
-            // 
-            this.Hora.HeaderText = "Hora";
-            this.Hora.Name = "Hora";
-            // 
-            // Asunto
-            // 
-            this.Asunto.HeaderText = "Asunto";
-            this.Asunto.Name = "Asunto";
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.HeaderText = "Descripción";
-            this.Descripcion.Name = "Descripcion";
             // 
             // GroupBox_Buscar
             // 
@@ -175,7 +149,13 @@
             this.ComboBox_Docente.FormattingEnabled = true;
             this.ComboBox_Docente.Items.AddRange(new object[] {
             "Yaned Larrea Cardona",
-            "Daniel Jaramillo"});
+            "María Fernández Martínez",
+            "Carlos García López",
+            "Andrea Rodríguez Pérez",
+            "Javier González Sánchez",
+            "Laura López Martín",
+            "Diego Pérez Hernández",
+            "Natalia Martínez García"});
             this.ComboBox_Docente.Location = new System.Drawing.Point(233, 34);
             this.ComboBox_Docente.Name = "ComboBox_Docente";
             this.ComboBox_Docente.Size = new System.Drawing.Size(429, 28);
@@ -207,6 +187,42 @@
             this.Label_Seleccionar_Docente.Size = new System.Drawing.Size(157, 20);
             this.Label_Seleccionar_Docente.TabIndex = 0;
             this.Label_Seleccionar_Docente.Text = "Seleccionar Docente";
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre Estudiante";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // Apellido
+            // 
+            this.Apellido.HeaderText = "Apellido Estudiante";
+            this.Apellido.Name = "Apellido";
+            this.Apellido.ReadOnly = true;
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
+            // 
+            // Hora
+            // 
+            this.Hora.HeaderText = "Hora";
+            this.Hora.Name = "Hora";
+            this.Hora.ReadOnly = true;
+            // 
+            // Asunto
+            // 
+            this.Asunto.HeaderText = "Asunto";
+            this.Asunto.Name = "Asunto";
+            this.Asunto.ReadOnly = true;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.HeaderText = "Descripción";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
             // 
             // FormConsultaDocente
             // 
@@ -241,8 +257,8 @@
         private System.Windows.Forms.Label Label_Seleccionar_Docente;
         private System.Windows.Forms.DataGridView Data_Consulta_Docente;
         private System.Windows.Forms.ComboBox ComboBox_Docente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Docente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estudiante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Hora;
         private System.Windows.Forms.DataGridViewTextBoxColumn Asunto;

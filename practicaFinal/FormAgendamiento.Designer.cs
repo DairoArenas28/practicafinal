@@ -206,7 +206,14 @@
             this.ComboBox_Docente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ComboBox_Docente.FormattingEnabled = true;
             this.ComboBox_Docente.Items.AddRange(new object[] {
-            "Yaned Larrea Cardona"});
+            "Yaned Larrea Cardona",
+            "María Fernández Martínez",
+            "Carlos García López",
+            "Andrea Rodríguez Pérez",
+            "Javier González Sánchez",
+            "Laura López Martín",
+            "Diego Pérez Hernández",
+            "Natalia Martínez García"});
             this.ComboBox_Docente.Location = new System.Drawing.Point(220, 165);
             this.ComboBox_Docente.Name = "ComboBox_Docente";
             this.ComboBox_Docente.Size = new System.Drawing.Size(385, 28);

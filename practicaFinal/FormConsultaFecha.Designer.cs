@@ -38,7 +38,8 @@
             this.Button_Buscar = new System.Windows.Forms.Button();
             this.DateTime_Seleccionar_Fecha = new System.Windows.Forms.DateTimePicker();
             this.Label_Seleccionar = new System.Windows.Forms.Label();
-            this.Estudiante = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Apellido = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Hora = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Docente = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -94,6 +95,9 @@
             // 
             // Data_Consulta_Fecha
             // 
+            this.Data_Consulta_Fecha.AllowUserToAddRows = false;
+            this.Data_Consulta_Fecha.AllowUserToDeleteRows = false;
+            this.Data_Consulta_Fecha.AllowUserToOrderColumns = true;
             this.Data_Consulta_Fecha.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Data_Consulta_Fecha.BackgroundColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.Data_Consulta_Fecha.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -108,7 +112,8 @@
             this.Data_Consulta_Fecha.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Data_Consulta_Fecha.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Data_Consulta_Fecha.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Estudiante,
+            this.Nombre,
+            this.Apellido,
             this.Fecha,
             this.Hora,
             this.Docente,
@@ -118,6 +123,7 @@
             this.Data_Consulta_Fecha.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
             this.Data_Consulta_Fecha.Location = new System.Drawing.Point(0, 80);
             this.Data_Consulta_Fecha.Name = "Data_Consulta_Fecha";
+            this.Data_Consulta_Fecha.ReadOnly = true;
             this.Data_Consulta_Fecha.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             this.Data_Consulta_Fecha.Size = new System.Drawing.Size(800, 295);
             this.Data_Consulta_Fecha.TabIndex = 2;
@@ -175,35 +181,47 @@
             this.Label_Seleccionar.TabIndex = 0;
             this.Label_Seleccionar.Text = "Seleccionar Fecha";
             // 
-            // Estudiante
+            // Nombre
             // 
-            this.Estudiante.HeaderText = "Estudiante";
-            this.Estudiante.Name = "Estudiante";
+            this.Nombre.HeaderText = "Nombre Estudiante";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            // 
+            // Apellido
+            // 
+            this.Apellido.HeaderText = "Apellido Estudiante";
+            this.Apellido.Name = "Apellido";
+            this.Apellido.ReadOnly = true;
             // 
             // Fecha
             // 
             this.Fecha.HeaderText = "Fecha";
             this.Fecha.Name = "Fecha";
+            this.Fecha.ReadOnly = true;
             // 
             // Hora
             // 
             this.Hora.HeaderText = "Hora";
             this.Hora.Name = "Hora";
+            this.Hora.ReadOnly = true;
             // 
             // Docente
             // 
             this.Docente.HeaderText = "Docente";
             this.Docente.Name = "Docente";
+            this.Docente.ReadOnly = true;
             // 
             // Asunto
             // 
             this.Asunto.HeaderText = "Asunto";
             this.Asunto.Name = "Asunto";
+            this.Asunto.ReadOnly = true;
             // 
             // Descripcion
             // 
             this.Descripcion.HeaderText = "Descripción";
             this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
             // 
             // FormConsultaFecha
             // 
@@ -238,7 +256,8 @@
         private System.Windows.Forms.DateTimePicker DateTime_Seleccionar_Fecha;
         private System.Windows.Forms.Label Label_Seleccionar;
         private System.Windows.Forms.DataGridView Data_Consulta_Fecha;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Estudiante;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Apellido;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Hora;
         private System.Windows.Forms.DataGridViewTextBoxColumn Docente;

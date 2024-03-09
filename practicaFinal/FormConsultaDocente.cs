@@ -49,8 +49,9 @@ namespace practicaFinal
 
                 if (!agendas.Any())
                 {
-                    
-                } else
+                    MessageBox.Show("No se encontraron datos", "Mensaje", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
                 {
                     // Limpiar el DataGridView antes de agregar nuevos datos
                     Data_Consulta_Docente.Rows.Clear();
@@ -60,30 +61,14 @@ namespace practicaFinal
                         int rowIndex = Data_Consulta_Docente.Rows.Add(); // Agregar una nueva fila al DataGridView
 
                         // Asignar los valores de la agenda a las celdas correspondientes en la fila recién agregada
-                        Data_Consulta_Docente.Rows[rowIndex].Cells["Estudiante"].Value = agenda.Element("Estudiante").Value;
+                        Data_Consulta_Docente.Rows[rowIndex].Cells["Nombre"].Value = agenda.Element("Nombre").Value;
+                        Data_Consulta_Docente.Rows[rowIndex].Cells["Apellido"].Value = agenda.Element("Apellido").Value;
                         Data_Consulta_Docente.Rows[rowIndex].Cells["Fecha"].Value = agenda.Element("Fecha").Value;
                         Data_Consulta_Docente.Rows[rowIndex].Cells["Hora"].Value = agenda.Element("Hora").Value;
-                        Data_Consulta_Docente.Rows[rowIndex].Cells["Docente"].Value = agenda.Element("Docente").Value;
                         Data_Consulta_Docente.Rows[rowIndex].Cells["Asunto"].Value = agenda.Element("Asunto").Value;
                         Data_Consulta_Docente.Rows[rowIndex].Cells["Descripcion"].Value = agenda.Element("Descripcion").Value;
                     }
                 }
-                // Limpiar el DataGridView antes de agregar nuevos datos
-                Data_Consulta_Docente.Rows.Clear();
-
-                foreach (var agenda in agendas)
-                {
-                    int rowIndex = Data_Consulta_Docente.Rows.Add(); // Agregar una nueva fila al DataGridView
-
-                    // Asignar los valores de la agenda a las celdas correspondientes en la fila recién agregada
-                    Data_Consulta_Docente.Rows[rowIndex].Cells["Estudiante"].Value = agenda.Element("Estudiante").Value;
-                    Data_Consulta_Docente.Rows[rowIndex].Cells["Fecha"].Value = agenda.Element("Fecha").Value;
-                    Data_Consulta_Docente.Rows[rowIndex].Cells["Hora"].Value = agenda.Element("Hora").Value;
-                    Data_Consulta_Docente.Rows[rowIndex].Cells["Docente"].Value = agenda.Element("Docente").Value;
-                    Data_Consulta_Docente.Rows[rowIndex].Cells["Asunto"].Value = agenda.Element("Asunto").Value;
-                    Data_Consulta_Docente.Rows[rowIndex].Cells["Descripcion"].Value = agenda.Element("Descripcion").Value;
-                }
-
             }
             catch (Exception ex)
             {

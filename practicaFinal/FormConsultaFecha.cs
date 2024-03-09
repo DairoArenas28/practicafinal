@@ -71,7 +71,8 @@ namespace practicaFinal
                         int rowIndex = Data_Consulta_Fecha.Rows.Add(); // Agregar una nueva fila al DataGridView
 
                         // Asignar los valores de la agenda a las celdas correspondientes en la fila recién agregada
-                        Data_Consulta_Fecha.Rows[rowIndex].Cells["Estudiante"].Value = agenda.Element("Estudiante").Value;
+                        Data_Consulta_Fecha.Rows[rowIndex].Cells["Nombre"].Value = agenda.Element("Nombre").Value;
+                        Data_Consulta_Fecha.Rows[rowIndex].Cells["Apellido"].Value = agenda.Element("Apellido").Value;
                         Data_Consulta_Fecha.Rows[rowIndex].Cells["Fecha"].Value = agenda.Element("Fecha").Value;
                         Data_Consulta_Fecha.Rows[rowIndex].Cells["Hora"].Value = agenda.Element("Hora").Value;
                         Data_Consulta_Fecha.Rows[rowIndex].Cells["Docente"].Value = agenda.Element("Docente").Value;

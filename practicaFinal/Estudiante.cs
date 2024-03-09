@@ -11,6 +11,9 @@ namespace practicaFinal
 {
     public class Estudiante : Docente
     {
+        //Estudiante() es un construtor, este nos permite crear un objeto con propiedades
+        //obligatorias, es decir, que cuando creamos un objeto debemos
+        //ingresar tanto el nombre como el apellido
         public Estudiante(string nombre, string apellido) : base(nombre, apellido)
         {
             this.Nombre = nombre;

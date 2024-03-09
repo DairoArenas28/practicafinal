@@ -45,7 +45,7 @@ namespace practicaFinal
             {
                 //Capturar los datos del formulario y guardarlo en las variables
                 string nombreEstudiante = (TextBox_Nombre_Estudiante.Text).Trim();
-                string apellidoEstudiante = (TextBox_Nombre_Estudiante.Text).Trim();
+                string apellidoEstudiante = (TextBox_Apellido_Estudiante.Text).Trim();
                 //Crear un objeto estudiante para agregarlo despues en el xml
                 Estudiante estudobj = new Estudiante(nombreEstudiante, apellidoEstudiante);
                 DateTime fecha = DateTime_Fecha.Value;
@@ -74,7 +74,8 @@ namespace practicaFinal
                             //Agregar un atributo como identificador unico a cada etiqueta agenda creada en el xml
                             new XAttribute("id", 1), //Se iniciado con un 1
                                 //Agregar las etiquedas solicitadas en el formulario con su respectivo valor 
-                                new XElement("Estudiante", estudobj.Nombre),
+                                new XElement("Nombre", estudobj.Nombre),
+                                new XElement("Apellido", estudobj.Apellido),
                                 new XElement("Fecha", fechaFormateada),
                                 new XElement("Hora", hora),
                                 new XElement("Docente", docente),
@@ -111,7 +112,8 @@ namespace practicaFinal
                         new XElement("Agenda",
                         //Agregar el ID siguiente al atributo
                         new XAttribute("id", newId),
-                            new XElement("Estudiante", estudobj.Nombre),
+                            new XElement("Nombre", estudobj.Nombre),
+                            new XElement("Apellido", estudobj.Apellido),
                             new XElement("Fecha", fechaFormateada),
                             new XElement("Hora", hora),
                             new XElement("Docente", docente),
